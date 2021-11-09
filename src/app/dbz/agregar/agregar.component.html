@@ -1,0 +1,24 @@
+<h3>Agregar</h3>
+    <hr>
+    <form (ngSubmit)="agregar()">
+      <input
+       type="text"
+       placeholder="Nombre"
+       name="nombre"
+       [(ngModel)]="nuevo.nombre"
+       />
+       <!--
+         [value]="nuevo.nombre"
+        (input)="cambiarNombre( $event )"
+        [value] indica que hay una propiedad en el ts a la cual hacer referencia, por ejemplo de un objeto
+        () los parentesis son para emitir o escuchar eventos
+        [(ngModel)]="nuevo.nombre"   metodo de angular para emitir y escuchar eventos, requiere la propiedad name-->
+      <input
+       type="number"
+       placeholder="Poder"
+       [value]="nuevo.poder"
+       name="poder"
+       [(ngModel)]="nuevo.poder"
+       />
+      <button type="submit">Agregar</button>
+    </form>
